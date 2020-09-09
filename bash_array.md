@@ -30,7 +30,7 @@ echo ${PCI_IDS[@]}
 # Auto-indent functions 
 
 - Use ``` declare -f <function-name>``` to apply indentation to ``` function-name```
-- If <function-name> is not specified, ``` declare -f``` will print all functions in the script with indentation.
+- If ```<function-name>``` is not specified, ``` declare -f``` will apply indentation to all functions in the script and print it.
 
 ```script
 #!/bin/bash
