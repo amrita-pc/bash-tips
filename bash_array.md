@@ -23,7 +23,6 @@ echo ${eno_arr[@]}
 - Syntax: arrayname=( $(command to execute) )
 
 ```script
-
 PCI_IDS=($(lspci -Dm | awk '/I350/{print $1}'))
 echo ${PCI_IDS[@]}
 ```
