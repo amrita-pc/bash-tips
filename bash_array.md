@@ -1,8 +1,8 @@
 # BASH ARRAYS
 
-```script
+## Populating bash array 
 
-1. Populating bash array
+```script
 
 ##########
 METHOD 1#
