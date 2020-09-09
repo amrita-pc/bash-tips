@@ -1,8 +1,6 @@
-```script
+# BASH ARRAYS
 
-############
-BASH ARRAYS
-############
+```script
 
 1. Populating bash array
 
@@ -10,8 +8,8 @@ BASH ARRAYS
 METHOD 1#
 ##########
 
-- create empty array with arrayname=()
-- iterate through elements using for loop, and add the value of each element ("$x") to the array
+- Create empty array with arrayname=()
+- Iterate through elements using for loop, and add the value of each element ("$x") to the array
 
 #!/bin/bash
 
@@ -27,11 +25,30 @@ echo ${eno_arr[@]}
 METHOD 2#
 ##########
 
-- directly assign output of bash command to array
-- syntax: arrayname=( $(command to execute) )
+- Directly assign output of bash command to array
+- Syntax: arrayname=( $(command to execute) )
 
 PCI_IDS=($(lspci -Dm | awk '/I350/{print $1}'))
 echo ${PCI_IDS[@]}
+```
+
+# Auto-indent functions by adding declare -f
+
+```script
+#!/bin/bash
+my_function () {
+echo "some result"
+return 55
+}
+
+declare -f my_function
+
+$ ./testfunction.sh
+my_function ()
+{
+    echo "some result";
+    return 55
+}
 ```
 
 
