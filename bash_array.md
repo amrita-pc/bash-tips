@@ -2,6 +2,7 @@
 
 ## Populating bash array 
 
+## Method 1:
 - Create empty array with arrayname=()
 - Iterate through elements using for loop, and add the value of each element ("$x") to the array
 
@@ -17,9 +18,11 @@ done
 echo ${eno_arr[@]}
 ```
 
-```script
+## Method 2:
 - Directly assign output of bash command to array
 - Syntax: arrayname=( $(command to execute) )
+
+```script
 
 PCI_IDS=($(lspci -Dm | awk '/I350/{print $1}'))
 echo ${PCI_IDS[@]}
@@ -27,7 +30,7 @@ echo ${PCI_IDS[@]}
 
 # Auto-indent functions 
 
-- Use ```script declare -f <function-name>``` to apply indentation to ```script function-name```
+- Use ``` declare -f <function-name>``` to apply indentation to ```script function-name```
 - If <function-name> is not specified, ```script declare -f``` will print all functions in the script with indentation.
 
 ```script
