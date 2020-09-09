@@ -1,3 +1,5 @@
+```script
+
 ############
 BASH ARRAYS
 ############
@@ -30,6 +32,6 @@ METHOD 2#
 
 PCI_IDS=($(lspci -Dm | awk '/I350/{print $1}'))
 echo ${PCI_IDS[@]}
-
+```
 
 
