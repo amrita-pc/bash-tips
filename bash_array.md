@@ -26,7 +26,7 @@ echo ${eno_arr[@]}
 ```
 while read line
 do
-   arr+=( $line )
+   arr+=( "$line" )
 done < file.txt
 ```
 
