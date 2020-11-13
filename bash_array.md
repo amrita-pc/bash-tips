@@ -1,13 +1,14 @@
 # BASH ARRAYS
 
-## Populating bash array 
+## Populating bash array
 
 ## Method 1:
 - Create empty array with arrayname=()
 - Iterate through elements using for loop, and add the value of each element ("$x") to the array
 
 ```script
-#!/bin/bash
+
+## Initialize a blank array called eno_arr()
 
 eno_arr=()
 for eno in $(ls -ld /sys/class/net/eno* | awk -F/ '{print $NF}')
@@ -15,7 +16,18 @@ do
         eno_arr+=("$eno")
 done
 
+## Print all values in the array
+
 echo ${eno_arr[@]}
+```
+
+- Use a while loop to read in lines in a file into array arr()
+
+```
+while read line
+do
+   arr+=( $line )
+done < file.txt
 ```
 
 ## Method 2:
