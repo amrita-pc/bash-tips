@@ -31,7 +31,7 @@ done < file.txt
 ```
 
 ```diff
-- NOTE: If using "arrayname" "+=" syntax, ensure there is no space between the array we are trying to append to
+- NOTE: If using "arrayname" "+=" syntax, ensure there is no space between the array we are trying to append to and the += operator
 + EXAMPLE: arrayname+=element
 ```
 
