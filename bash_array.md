@@ -30,6 +30,11 @@ do
 done < file.txt
 ```
 
+```diff
+- NOTE: If using "arrayname" "+=" syntax, ensure there is no space between the array we are trying to append to
++ EXAMPLE: arrayname+=element
+```
+
 ## Method 2:
 - Directly assign output of bash command to array
 - Syntax: arrayname=( $(command to execute) )
